@@ -18,3 +18,17 @@ License
 -------
 
 See LICENSE.txt
+
+Setup
+-----
+
+just install teensyduino and select the Teensy++ 2.0 board. USB types is Raw HID. next navigate to the destination dir of teensy. It should /path/to/arduino/installation/path/hardware/teensy/avr/cores/usb_rawhid
+
+in usb_private.h chage these following things 
+
+```
+#define VENDOR_ID               to 0x16C0
+#define PRODUCT_ID              to 0x0486
+#define RAWHID_USAGE_PAGE 	to 0xf1d0 // seems like this reading as fido.
+#define RAWHID_USAGE	to 0x0200
+```
