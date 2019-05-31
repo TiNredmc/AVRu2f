@@ -1,4 +1,4 @@
-teensy-u2f
+AVRu2f 
 ==========
 
 U2F implementation for Teensy ++ 2.0.
