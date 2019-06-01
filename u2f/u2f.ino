@@ -814,6 +814,7 @@ void loop() {
   n = RawHID.recv(recv_buffer, 0); // 0 timeout = do not wait
 
   if (n > 0) {
+    digitalWrite(6, HIGH);
 #ifdef DEBUG
 #ifndef DESKTOP_TEST
     Serial.print("RAW_RECV: ");
