@@ -979,7 +979,7 @@ void doneLED(){
   delay(500);
   digitalWrite(6, LOW);
   delay(500);
-    a++
+  a++;
       if (a > 3){
         digitalWrite(6, HIGH);
         loop();
