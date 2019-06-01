@@ -168,6 +168,8 @@ void setup() {
   Serial.println(F("U2F"));
   uECC_set_rng(&RNG);
   digitalWrite(6, HIGH);
+  delay(500);
+  digitalWrite(6, LOW);
 }
 
 void cleanup_timeout()
@@ -939,7 +941,7 @@ void loop() {
 #endif
         channel_states[cidx].state = STATE_CHANNEL_WAIT_PACKET;
         processPacket(large_buffer);
-        //doneLED();
+        doneLED();
         return;
       }
     }
@@ -971,10 +973,16 @@ void loop() {
 }
 
 void doneLED(){
+  int a = 1;
   while(1){
   digitalWrite(6, HIGH);
   delay(500);
   digitalWrite(6, LOW);
   delay(500);
+    a++
+      if (a > 3){
+        digitalWrite(6, HIGH);
+        loop();
+      }
   }
 }
