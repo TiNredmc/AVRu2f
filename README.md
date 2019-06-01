@@ -5,8 +5,8 @@ U2F implementation for Teensy ++ 2.0.
 
 I ported the code from the Teensy LC to Teensy ++ 2.0. I can't handle with the price of the real one (1,200 THB for AVR 8bit ? CRAZY !!!). So I decided to buy the clone for 220 THB. and it works just like the genuine one !. But I don't really want to do this. I want to support the PJRC but I will run into the problems like import fees, HELL-like shipping price and the too high pricetag.  
 
-I actually replace and modified some of parts to at lease working. I tested on this site <https://akisec.com/demo/> registration and login are works well on this site. and this site works only for the registration <https://u2f.bin.coffee>
-
+I actually replace and modified some of parts to at lease working. I tested on this site <https://akisec.com/demo/> registration and login are works well on this site. and this site works only for the registration <https://u2f.bin.coffee> .
+On this github-based website also working <https://mdp.github.io/u2fdemo/#>
 
 
 For the ECDSA key generation and signing this implementation uses the micro-ecc library:
@@ -31,4 +31,13 @@ in usb_private.h chage these following things
 #define PRODUCT_ID              to 0x0486
 #define RAWHID_USAGE_PAGE 	to 0xf1d0 // seems like this reading as fido.
 #define RAWHID_USAGE	to 0x0200
+```
+LED status
+----------
+First time after plugged in. Led will turn on .5 s and turn off.
+
+```
+Status --- ON for .5 sec --- power on
+Status --- ON NO blink--- Packet received and / or sending the data
+Status --- blink .5 sec on .5 sec of ---  transmission done
 ```
