@@ -167,7 +167,7 @@ static cmpresult_t uECC_vli_cmp_unsafe(const uECC_word_t *left,
 #endif
 
 #if (uECC_PLATFORM == uECC_avr)
-    #include "asm_avr.inc"
+    #include "asm_avr.h"
 #endif
 
 #if default_RNG_defined
