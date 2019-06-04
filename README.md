@@ -32,6 +32,8 @@ in usb_private.h chage these following things
 #define RAWHID_USAGE_PAGE 	to 0xf1d0 // seems like this reading as fido.
 #define RAWHID_USAGE	to 0x0200
 ```
+NOTE After changed the Product ID. You won't get auto reset from teensy loader anymore. To upload code, you need to press the button manually
+
 LED status
 ----------
 First time after plugged in. Led will turn on .5 s and turn off.
