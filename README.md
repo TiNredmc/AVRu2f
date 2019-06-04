@@ -41,3 +41,8 @@ Status --- ON for .5 sec --- power on
 Status --- ON NO blink--- Packet received and / or sending the data
 Status --- blink .5 sec on .5 sec of ---  transmission done
 ```
+What I've Expected in the future.
+--------
+- fix the Authentication (Sign). It's alway failed.
+- add hardware security level to generate Entropy and keep the key 
+Using ATECC508A-SSHDA
