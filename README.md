@@ -28,7 +28,7 @@ in usb_private.h chage these following things
 
 ```
 #define VENDOR_ID               to 0x16C0
-#define PRODUCT_ID              to 0x0486
+#define PRODUCT_ID              to 0xf1d0
 #define RAWHID_USAGE_PAGE 	to 0xf1d0 // seems like this reading as fido.
 #define RAWHID_USAGE	to 0x0200
 ```
@@ -38,8 +38,8 @@ First time after plugged in. Led will turn on .5 s and turn off.
 
 ```
 Status --- ON for .5 sec --- power on
-Status --- ON NO blink--- Packet received and / or sending the data
-Status --- blink .5 sec on .5 sec of ---  transmission done
+Status --- ON NO blink --- Packet received and / or sending the data
+Status --- OFF --- transmission done
 ```
 What I've Expected in the future.
 --------
