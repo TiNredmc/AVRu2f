@@ -1,0 +1,3 @@
+Akisec demo ---- registration and sign work well
+Google blog U2F demostration --- registration works well but authentication (sign failed)
+u2f.bin.coffee --- registration complete with 0 error log but sing failed (FAILED verification )
