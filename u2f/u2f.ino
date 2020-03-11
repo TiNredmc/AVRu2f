@@ -9,7 +9,7 @@
 #undef DEBUG
 //#define DEBUG
 
-#define CID_BROADCAST           0xDEADBEEF  // Broadcast channel id
+#define CID_BROADCAST           0xffffffff  // Broadcast channel id
 
 #define TYPE_MASK               0x80  // Frame type mask
 #define TYPE_INIT               0x80  // Initial frame identifier
@@ -96,7 +96,7 @@ const char attestation_der[] = "\x30\x82\x01\x3c\x30\x81\xe4\xa0\x03\x02"
                                "\x10\xdf";
 
 //key handle: (private key + app parameter) ^ this array
-const char handlekey[] = "-I-A-M-T-I-N-L-E-T-H-A-X-A-N-D-I-L-O-V-E-C-A-T-A-N-D-A-N-I-M-E--A-L-S-O-C-O-D-I-N-G--";
+const char handlekey[] = "091efb608cb7edbace16c2e73212de4d010e41bb4b3cf3e7139909412f583f525303ecafefb4c201f7fec84a10fe4f3c15b9b4aa1f80fdb53ec66d8fa8d199c7";
 
 const struct uECC_Curve_t * curve = uECC_secp256r1(); //P-256
 uint8_t private_k[36]; //32
